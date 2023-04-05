@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.login{
+    display: flex;
+    justify-content: center;
+    margin-left: 23.7%;
+}
+
+.form{
+    padding-top: 35px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo h1{
+    font-size: 70px;
+    font-family: Montserrat;
+    font-weight: bolder;
+}
+
+.inputs input{
+    background-color: #82B6F350;
+    width: 570px;
+    height: 72px;
+    border-radius: 20px;
+    border: none;
+}
+
+.label{
+    font-size: 30px;
+    font-family: Montserrat;
+    padding-top: 50px;
+}
+
+.creaCuenta h4{
+    font-family: Montserrat;
+    font-size: 20px;
+}
+
+.creaCuenta a{
+    color: #82B6F3;
+}
+
+.btnInicioSesion{
+    display: flex;
+    justify-content: center;
+}
+
+.btnInicioSesion button{
+    width: 570px;
+    height: 75px;
+    background-color: #82B6F350;
+    font-family: Montserrat;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+}
+
+.rectangulo img{
+    width: 850px;
+    height: 1081.1px;
+}
