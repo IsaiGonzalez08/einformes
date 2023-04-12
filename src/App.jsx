@@ -1,9 +1,10 @@
-import { Login } from "./views/Login";
+import { Routered } from "./Routered";
+
 
 export const App = () => {
   return (
     <>
-      <Login></Login>
+      <Routered></Routered>
     </>
   );
 }

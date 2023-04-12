@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IconButton, InputLabel, InputAdornment, FormControl, FilledInput, Button } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -15,12 +16,18 @@ export const Login = () => {
         event.preventDefault();
     };
 
+    const navigate = useNavigate();
+
+    const handleClickLogin = () => {
+        navigate("/Home");
+      };
+
     return (
         <>
             <div className="login">
                 <form className="form">
                     <div className="titulo">
-                        <h1>Bienvenido a <br /> E-Informes</h1>
+                        <h1>Bienvenido a E-Informes</h1>
                     </div>
                     <FormControl sx={{ my: 2 }} variant="filled" fullWidth>
                         <InputLabel htmlFor="input-with-icon-adornment">
@@ -56,17 +63,20 @@ export const Login = () => {
                             }
                         />
                     </FormControl>
-                    <div className="creaCuenta">
-                        <h4>¿Aún no tiene cuenta? <a href=''>Crea mi cuenta</a></h4>
-                    </div>
-                    <Button sx={{ 
-                         my: 2,
-                         color:'black',
-                         background:'#82B6F350', 
-                         height:'50px', 
-                         fontFamily:'Montserrat',
-                         fontWeight:'bold'}}  
-                         fullWidth type="submit" variant="outlined">
+                    <Button color="secondary"
+                        style={{ fontSize: '.79em' }}
+                        sx={{ color:'#82B6F3' }}
+                        align='left' textSizeSmall
+                        >¿Aún no tienes una cuenta? Crea tú cuenta aquí</Button>
+                    <Button sx={{
+                        my: 2,
+                        height: '50px',
+                        fontFamily: 'Montserrat',
+                        fontWeight: 'Bolder',
+                        
+                    }}
+                        fullWidth type="submit" variant="contained"
+                        onClick={handleClickLogin}>
                         Iniciar Sesión
                     </Button>
                 </form>

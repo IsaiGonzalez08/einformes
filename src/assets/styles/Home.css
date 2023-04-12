@@ -1,0 +1,20 @@
+.seccion{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #82B6F380;
+    height: 1085px;
+    max-height: 100%;
+    max-width: 365px;
+    margin-right: 0;
+}
+
+.titulo{
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.titulo h2{
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: bold;
+}

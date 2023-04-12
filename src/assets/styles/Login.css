@@ -1,18 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+body{
+    margin: 0;
+}
+
 
 .login{
     display: flex;
     justify-content: center;
-    margin-left: 25.6%;
+    margin-left: 22%;
 }
 
 .form{
-    padding-top: 105px;
+    margin-top: 125px;
 }
 
 .titulo{
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .titulo h1{
@@ -24,10 +30,17 @@
 .creaCuenta h4{
     font-family: Montserrat;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
-.creaCuenta a{
+.creaCuenta button{
+    background-color: white;
+    border: none;
     color: #82B6F3;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .btnInicioSesion button{
