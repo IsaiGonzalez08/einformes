@@ -13,72 +13,65 @@
 }
 
 .encabezado{
-    margin-left: 10%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 80px;
+    padding-top: 20px;
 }
 
 .encabezado h1{
     font-size: 60px;
     font-family: Montserrat;
     font-weight: ExtraBold;
+    margin: 0;
 }
 
-.Nombre-Fecha{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 8%;
-}
-.Nombre-Fecha h3{
-    font-family: Montserrat;
-    font-weight: SemiBold;
-    font-size: 30px;
+.titulo{
+    padding-left: 150px;
 }
 
-.Fecha{
-    padding-right: 40px;
+.Back{
+    padding-top: 20px;
 }
 
-.Fecha input{
-    margin-top: 16px;
-    margin-left: 15px;
-    width: 300px;
-    height: 37px;
+.Back button{
+    background-color: white;
     border: none;
-    border-bottom: solid 2px black;
-    font-size: 18px;
+    cursor: pointer;
 }
 
-.Admi-Contri{
+.step{
     display: flex;
-    justify-content: space-around;
-    padding-left: 70px;
-    padding-top: 30px;
+    justify-content: flex-end;
+    padding-top: 70px;
+    padding-right: 90px;
 }
 
-.Admi-Contri h3{
-    font-size: 30px;
-    font-family: Montserrat;
-    font-weight: SemiBold;
-}
-
-.selects{
+.preguntas{
     display: flex;
-    justify-content: space-around;
-    margin-right: 20px;
+    justify-content: center;
+    padding: 50px 0px 0px 0px;
+    margin-top: -20px;
 }
 
-.selects h3{
-    font-size: 30px;
+.preguntas h3{
     font-family: Montserrat;
-    font-weight: SemiBold;
+    font-weight: ExtraBold;
+    font-size: 20px;
 }
 
-.sede{
-    margin-top: -70px;
+.seccion2{
+    padding-left: 280px;
+    padding-right: 50px;
 }
 
 .btnEnviar{
     display: flex;
     justify-content: flex-end;
-    margin-top: 60px;
-    margin-right: 130px;
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+.sede, .contribuyente, .fecha, .empresa{
+    padding: 10px 0px 10px 0px;
 }

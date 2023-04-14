@@ -19,6 +19,7 @@ body{
     display: flex;
     justify-content: center;
     margin: 0;
+    text-align: center;
 }
 
 .titulo h1{

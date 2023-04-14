@@ -1,0 +1,25 @@
+.cuestionario{
+    display: flex;
+    justify-content: center;
+}
+
+.sec2{
+    padding-left: 280px;
+    padding-right: 50px;
+}
+
+.cuestionario h3{
+    font-family: Montserrat;
+    font-weight: ExtraBold;
+    font-size: 20px;
+}
+
+.devolucion, .declaracion, .mensuales, .ventas{
+    margin-top: -8px;
+}
+
+.btnEnviar2{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
