@@ -15,14 +15,14 @@ body{
     margin-top: 125px;
 }
 
-.titulo{
+.titu{
     display: flex;
     justify-content: center;
     margin: 0;
     text-align: center;
 }
 
-.titulo h1{
+.titu h1{
     font-size: 70px;
     font-family: Montserrat;
     font-weight: bolder;

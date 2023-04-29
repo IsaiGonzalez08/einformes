@@ -52,7 +52,7 @@ export const Opinion2 = () => {
                     </div>
                 </div>
                 <div className="step">
-                    <Stepper activeStep={0} nonLinear sx={{ width: '980px' }}>
+                    <Stepper activeStep={1} nonLinear sx={{ width: '980px' }}>
                         {steps.map((label) => (
                             <Step key={label}>
                                 <StepLabel>{label}</StepLabel>
@@ -69,8 +69,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                         </div>
@@ -81,8 +81,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                         </div>
@@ -94,8 +94,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                         </div>
@@ -107,8 +107,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                         </div>
@@ -119,8 +119,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}}/>} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}}/>} label="No" />
                                 </RadioGroup>
                             </FormControl>
                         </div>
@@ -133,8 +133,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                             </div>
@@ -145,8 +145,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                             </div>
@@ -157,8 +157,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                             </div>
@@ -169,8 +169,8 @@ export const Opinion2 = () => {
                                     aria-labelledby="demo-radio-buttons-group-label"
                                     name="radio-buttons-group"
                                 >
-                                    <FormControlLabel value="Si" control={<Radio />} label="Si" />
-                                    <FormControlLabel value="No" control={<Radio />} label="No" />
+                                    <FormControlLabel value="Si" control={<Radio sx={{marginTop:'-5px'}} />} label="Si" />
+                                    <FormControlLabel value="No" control={<Radio sx={{marginTop:'-5px'}} />} label="No" />
                                 </RadioGroup>
                             </FormControl>
                             </div>

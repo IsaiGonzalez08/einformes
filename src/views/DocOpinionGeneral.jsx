@@ -1,17 +1,23 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react'
-import { TextField, 
-    Radio, 
+import {
+    TextField,
+    Radio,
     RadioGroup,
-    FormControlLabel, 
-    FormControl, 
-    Button, 
-    NativeSelect, 
-    InputLabel, 
-    Stepper, 
-    Step, 
-    StepLabel } 
-from '@mui/material';
+    FormControlLabel,
+    FormControl,
+    Button,
+    NativeSelect,
+    InputLabel,
+    Stepper,
+    Step,
+    StepLabel, 
+    useTheme,
+    OutlinedInput,
+    MenuItem,
+    Select
+}
+    from '@mui/material';  
 
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
@@ -41,6 +47,37 @@ export const DocOpinionGeneral = () => {
         'Fin',
     ];
 
+    const [sedeName, setSedeName] = useState([]);
+
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setSedeName(
+            // On autofill we get a stringified value.
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
+    const sedes = [
+        'Aguascalientes 1',
+        'Baja California 1',
+        'Baja California 2',
+        'Baja California 3',
+        'Baja California sur 1',
+        'Baja California sur 2',
+        'Campeche 1',
+    ];
+
+    const MenuProps = {
+        PaperProps: {
+            style: {
+                width: 250,
+            },
+        },
+    };
+
+
     return (
         <>
             <img className='cuadroDoc' src={CuadronDoc} />
@@ -48,7 +85,7 @@ export const DocOpinionGeneral = () => {
             <div className="form2">
                 <div className="encabezado">
                     <div className="Back">
-                        <button onClick={handleClickAtras}><img src={Back} /></button> 
+                        <button onClick={handleClickAtras}><img src={Back} /></button>
                     </div>
                     <div className="titulo">
                         <h1>Informe sobre la situación fiscal</h1>
@@ -70,7 +107,7 @@ export const DocOpinionGeneral = () => {
                             <TextField
                                 label="Empresa"
                                 id="standard-size-normal"
-                                defaultValue="Empresa"
+
                                 variant="standard"
                                 sx={{ width: '300px' }}
                             />
@@ -89,13 +126,36 @@ export const DocOpinionGeneral = () => {
                         </div>
                         <div className="sede">
                             <h3>Escribe la sede</h3>
-                            <TextField
-                                label="Sede"
-                                id="standard-size-normal"
-                                defaultValue="Sede"
-                                variant="standard"
-                                sx={{ width: '300px' }}
-                            />
+                            <FormControl sx={{ width: 300 }}>
+                                <Select
+                                    multiple
+                                    displayEmpty
+                                    value={sedeName}
+                                    onChange={handleChange}
+                                    input={<OutlinedInput />}
+                                    renderValue={(selected) => {
+                                        if (selected.length === 0) {
+                                            return <em>Selecionar</em>;
+                                        }
+
+                                        return selected.join(', ');
+                                    }}
+                                    MenuProps={MenuProps}
+                                    inputProps={{ 'aria-label': 'Without label' }}
+                                >
+                                    <MenuItem disabled value="">
+                                        <em>Seleccionar</em>
+                                    </MenuItem>
+                                    {sedes.map((sede) => (
+                                        <MenuItem
+                                            key={sede}
+                                            value={sede}
+                                        >
+                                            {sede}
+                                        </MenuItem>
+                                    ))}
+                                </Select>
+                            </FormControl>
                         </div>
                         <div className="fecha">
                             <h3>Fecha de emisión de la opinión</h3>
@@ -121,15 +181,12 @@ export const DocOpinionGeneral = () => {
                                 >
                                     <option value='--Seleccionar--'>Seleccionar</option>
                                     <option value='Contribuyente del regimen coordinado'>Es contribuyente del regimen Coordinado</option>
-                                    <option value='Es contribuyentes del rémen  de AGAPES'>Es contribuyentes del rémen  de AGAPES</option>
-                                    <option value='Es persona fisica dedicaxda al autotrasporte, no perteneciente a un coordinado.'>Es persona fisica dedicaxda al autotrasporte, no perteneciente a un coordinado.</option>
+                                    <option value='Es contribuyentes del rémen  de AGAPES'>Es contribuyentes del regimen de AGAPES</option>
+                                    <option value='Es persona fisica dedicada al autotrasporte, no perteneciente a un coordinado.'>Es persona fisica dedicada al autotrasporte, no perteneciente a un coordinado</option>
                                 </NativeSelect>
                             </FormControl>
                         </div>
                     </div>
-
-
-
 
                     <div className="seccion2">
                         <div className="dictamen">
@@ -147,6 +204,10 @@ export const DocOpinionGeneral = () => {
                                     sx={{ width: '300px' }}
                                 >
                                     <option value='Seleccionar'>Seleccionar</option>
+                                    <option value='Seleccionar'>Sin salvedades</option>
+                                    <option value='Seleccionar'>Negativa</option>
+                                    <option value='Seleccionar'>Abstención de opinión</option>
+                                    <option value='Seleccionar'>Con salvedades</option>
                                 </NativeSelect>
                             </FormControl>
                         </div>
@@ -204,14 +265,14 @@ export const DocOpinionGeneral = () => {
                                     <option value='Se dictamina para IMSS e Infonavit por otro contador'>Se dictamina para IMSS e Infonavit por otro contador</option>
                                     <option value='Se dictamina para IMSS e Infonavit por el mismo contador'>Se dictamina para IMSS e Infonavit por el mismo contador</option>
                                     <option value='Se dictamina solo para IMSS por otro contador'>Se dictamina solo para IMSS por otro contador</option>
-                                    <option value='Se dictamina solo para IMSS por el mismo contador'>Se dictamina solo para IMSS por el mismo contador</option>                                   
+                                    <option value='Se dictamina solo para IMSS por el mismo contador'>Se dictamina solo para IMSS por el mismo contador</option>
                                 </NativeSelect>
                             </FormControl>
                         </div>
                     </div>
                 </div>
                 <div className="btnEnviar">
-                    <Button variant="contained" onClick={handleClickEnviar} sx={{width:'280px'}}>Enviar</Button>
+                    <Button variant="contained" onClick={handleClickEnviar} sx={{ width: '280px' }}>Enviar</Button>
                 </div>
             </div>
         </>

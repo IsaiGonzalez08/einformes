@@ -26,12 +26,12 @@ export const Login = () => {
         <>
             <div className="login">
                 <form className="form">
-                    <div className="titulo">
+                    <div className="titu">
                         <h1>Bienvenido a E-Informes</h1>
                     </div>
                     <FormControl sx={{ my: 2 }} variant="filled" fullWidth>
                         <InputLabel htmlFor="input-with-icon-adornment">
-                            Username
+                            E-mail
                         </InputLabel>
                         <FilledInput
                             name="email"
